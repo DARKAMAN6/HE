@@ -53,7 +53,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
         await message.reply_photo(
         photo=f"{ALIVE_IMG}",
-        caption=f"""✨ **𝐈 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖.**""",
+        caption=f"""💫 **𝗜 𝗖𝗔𝗡 𝗣𝗟𝗔𝗬 𝗠𝗨𝗦𝗜𝗖 𝗜𝗡 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘 𝗖𝗛𝗔𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 > [𝗧𝗥𝗢𝗝𝗔𝗡𝗦](https://t.me/THE_TROJANS_NETWORK)❤️**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -88,12 +88,13 @@ async def start_(client: Client, message: Message):
     command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def help(client: Client, message: Message):
-    await message.reply_text(
-        f"""✨ **𝗛𝗘𝗟𝗟𝗢** {message.from_user.mention()} !
+    await message.reply_photo(
+        photo=f"{ALIVE_IMG}",
+        caption=f"""✨ **𝗛𝗘𝗟𝗟𝗢** {message.from_user.mention()} !
 » **press the button below to read the explanation and see the list of available commands !**
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __Powered by {BOT_NAME}""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="𝐇𝐄𝐋𝐏", callback_data="cbguide")]]
+            [[InlineKeyboardButton(text="💫𝐇𝐄𝐋𝐏💫", callback_data="cbguide")]]
         ),
     )
 
