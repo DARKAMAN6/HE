@@ -1,7 +1,3 @@
-#𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 𝙾𝙿 
-#𝙾𝚆𝙽𝙴𝚁 ➪ 𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽6 𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽5
-# 𝚃𝙴𝙰𝙼 ➪ 𝙰𝙼𝙰𝙽-𝙶𝚄𝙹𝙹𝙰𝚁
-
 from handlers.play import cb_admin_check
 from helpers.decorators import authorized_users_only
 from pyrogram import Client, filters
@@ -19,33 +15,34 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **𝐖𝐄𝐋𝐂𝐎𝐌𝐄 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-🌸 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ @DARKAMAN !**""",
+        f"""❤️ **𝗪𝗘𝗟𝗖𝗢𝗠𝗘 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
+🌈 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝗖𝗔𝗡 𝗣𝗟𝗔𝗬 𝗠𝗨𝗦𝗜𝗖 𝗜𝗡 𝗬𝗢𝗨𝗥 𝗢𝗣 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘 𝗖𝗛𝗔𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 > [𝗧𝗥𝗢𝗝𝗔𝗡𝗦](https://t.me/THE_TROJANS_NETWORK)**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤",
+                        "💫𝗦𝗨𝗠𝗠𝗢𝗡 𝗠𝗘💫",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("𝗛𝗢𝗪 𝗧𝗢 𝗨𝗦𝗘 𝗠𝗘", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("༎⃝🌸𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒༎⃝➤", callback_data="cbcmds"),
-                    InlineKeyboardButton("༎⃝💔𝐂𝐑𝐄𝐀𝐓𝐄𝐑༎⃝➤", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("✨𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", callback_data="cbcmds"),
+                    InlineKeyboardButton("🌈𝗢𝗪𝗡𝗘𝗥", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👅𝗖𝗛𝗜𝗧 𝗖𝗛𝗔𝗧", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🗯️𝗡𝗘𝗧 𝗪𝗢𝗥𝗞", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
         ),
         disable_web_page_preview=True,
     )
+
 
 
 @Client.on_callback_query(filters.regex("cbhelp"))
