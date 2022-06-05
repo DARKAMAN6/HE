@@ -48,21 +48,22 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbhelp(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **𝐇𝐄𝐋𝐋𝐎** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
-» **press the button below to read the explanation and see the list of available commands !**
-⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
+        f"""✨ **𝗛𝗘𝗟𝗟𝗢** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
+
+» **ᴘʀᴇss ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ʀᴇᴀᴅ ᴛʜᴇᴇ ᴇxᴘʟᴀɴᴀᴛɪᴏɴ ᴀɴᴅ sᴇᴇ ᴛʜᴇᴀᴠᴀɪᴀʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs**
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("༎⃝💜𝐁𝐀𝐒𝐈𝐂༎⃝➤", callback_data="cbbasic"),
-                    InlineKeyboardButton("༎⃝✨𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃..༎⃝➤", callback_data="cbadvanced"),
+                    InlineKeyboardButton("❤️𝗕𝗔𝗦𝗜𝗖 𝗖𝗠𝗗", callback_data="cbbasic"),
+                    InlineKeyboardButton("💫𝗔𝗗𝗩𝗔𝗡𝗖𝗘 𝗖𝗠𝗗", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("༎⃝🌸𝐀𝐃𝐌𝐈𝐍༎⃝➤", callback_data="cbadmin"),
-                    InlineKeyboardButton("༎⃝🥀𝐒𝐔𝐃𝐎༎⃝➤", callback_data="cbsudo"),
+                    InlineKeyboardButton("👅𝗔𝗗𝗠𝗜𝗡 𝗖𝗠𝗗", callback_data="cbadmin"),
+                    InlineKeyboardButton("🥰𝗦𝗨𝗗𝗢 𝗖𝗠𝗗", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("༎⃝🔥𝐎𝐖𝐍𝐄𝐑༎⃝➤", callback_data="cbowner")],
-                [InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbguide")],      
+                [InlineKeyboardButton("🔥𝗢𝗪𝗡𝗘𝗥 𝗖𝗠𝗗", callback_data="cbowner")],
+                [InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbguide")],      
             ]
         ),
     )
@@ -94,9 +95,9 @@ async def cbbasic(_, query: CallbackQuery):
 /cend - end the streaming music
 /refresh - refresh the admin cache
 /ubjoinc - invite the assistant for join to your channel
-⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbhelp")]]
         ),
     )
 
@@ -113,7 +114,7 @@ async def cbadvanced(_, query: CallbackQuery):
 /id - show the group/user id & other
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbhelp")]]
         ),
     )
 
@@ -137,7 +138,7 @@ async def cbadmin(_, query: CallbackQuery):
 /music (on / off) - disable / enable music player in your group
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbhelp")]]
         ),
     )
 
@@ -154,7 +155,7 @@ async def cbsudo(_, query: CallbackQuery):
 /sh (query) - run code
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbhelp")]]
         ),
     )
 
@@ -172,7 +173,7 @@ async def cbowner(_, query: CallbackQuery):
 📝 note:all commands owned by this bot can be executed by the owner of the bot without any exception𝚂.
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbhelp")]]
         ),
     )
 
@@ -189,8 +190,8 @@ async def cbguide(_, query: CallbackQuery):
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("༎⃝🌺𝐂𝐌𝐃 𝐋𝐈𝐒𝐓༎⃝➤", callback_data="cbhelp")],
-                [InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")],
+                [InlineKeyboardButton("❣️𝗖𝗠𝗗 𝗟𝗜𝗦𝗧", callback_data="cbhelp")],
+                [InlineKeyboardButton("👻𝗖𝗟𝗢𝗦𝗘", callback_data="close")],
             ]
         ),
     )
@@ -209,15 +210,15 @@ async def cbback(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏸ 𝙿𝙰𝚄𝚂𝙴", callback_data="cbpause"),
-                    InlineKeyboardButton("▶️ 𝚁𝙴𝚂𝚄𝙼𝙴", callback_data="cbresume"),
+                    InlineKeyboardButton("⏸ ᴘᴀᴜsᴇ", callback_data="cbpause"),
+                    InlineKeyboardButton("▶️ ʀᴇsᴜᴍᴇ", callback_data="cbresume"),
                 ],
                 [
-                    InlineKeyboardButton("⏩ 𝚂𝙺𝙸𝙿", callback_data="cbskip"),
-                    InlineKeyboardButton("⏹ 𝚂𝚃𝙾𝙿", callback_data="cbend"),
+                    InlineKeyboardButton("⏩ sᴋɪᴘ", callback_data="cbskip"),
+                    InlineKeyboardButton("⏹ sᴛᴏᴘ", callback_data="cbend"),
                 ],
-                [InlineKeyboardButton("⛔ 𝙰𝙽𝚃𝙸 𝙲𝙼𝙳", callback_data="cbdelcmds")],
-                [InlineKeyboardButton("🗑 𝙲𝙻𝙾𝚂𝙴", callback_data="close")],
+                [InlineKeyboardButton("⛔ ᴀɴᴛɪ ᴄᴍᴅ", callback_data="cbdelcmds")],
+                [InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="close")],
             ]
         ),
     )
@@ -240,32 +241,35 @@ async def cbdelcmds(_, query: CallbackQuery):
       
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbback")]]
+            [[InlineKeyboardButton("❣️ 𝗕𝗔𝗖𝗞", callback_data="cbback")]]
         ),
     )
 
 
 @Client.on_callback_query(filters.regex("cbcmds"))
-async def cbhelps(_, query: CallbackQuery):
+async def cbhelp(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **𝙷𝙴𝙻𝙻𝙾** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
-» **press the button below to read the explanation and see the list of available commands !**
-⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
+        f"""✨ **𝗛𝗘𝗟𝗟𝗢** [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
+
+» **ᴘʀᴇss ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ʀᴇᴀᴅ ᴛʜᴇᴇ ᴇxᴘʟᴀɴᴀᴛɪᴏɴ ᴀɴᴅ sᴇᴇ ᴛʜᴇᴀᴠᴀɪᴀʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs**
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("༎⃝💜𝐁𝐀𝐒𝐈𝐂༎⃝➤", callback_data="cblocal"),
-                    InlineKeyboardButton("༎⃝✨𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃..༎⃝➤", callback_data="cbadven"),
+                    InlineKeyboardButton("❤️𝗕𝗔𝗦𝗜𝗖 𝗖𝗠𝗗", callback_data="cbbasic"),
+                    InlineKeyboardButton("💫𝗔𝗗𝗩𝗔𝗡𝗖𝗘 𝗖𝗠𝗗", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("༎⃝🌸𝐀𝐃𝐌𝐈𝐍༎⃝➤", callback_data="cblamp"),
-                    InlineKeyboardButton("༎⃝🥀𝐒𝐔𝐃𝐎༎⃝➤", callback_data="cblab"),
+                    InlineKeyboardButton("👅𝗔𝗗𝗠𝗜𝗡 𝗖𝗠𝗗", callback_data="cbadmin"),
+                    InlineKeyboardButton("🥰𝗦𝗨𝗗𝗢 𝗖𝗠𝗗", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("༎⃝🔥𝐎𝐖𝐍𝐄𝐑༎⃝➤", callback_data="cbmoon")],
-                [InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbstart")],
+                [InlineKeyboardButton("🔥𝗢𝗪𝗡𝗘𝗥 𝗖𝗠𝗗", callback_data="cbowner")],
+                [InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbguide")],      
             ]
         ),
     )
+
+
 
 
 @Client.on_callback_query(filters.regex("cbhowtouse"))
@@ -279,7 +283,7 @@ async def cbguides(_, query: CallbackQuery):
 4.) **turn on the voice chat first before start to play music.**
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbstart")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbstart")]]
         ),
     )
 
@@ -292,7 +296,7 @@ async def cblocal(_, query: CallbackQuery):
 『 𝙶𝚁𝙾𝚄𝙿 𝚅𝙲 𝙲𝙼𝙳 』
 
 /play (song name) - play song directly from youtube 
-/ghost (reply to audio) - play song using audio file
+/stream (reply to audio) - play song using audio file
 /playlist - show the list song in queue
 /song (song name) - download song from youtube
 /search (video name) - search video from youtube detailed
@@ -311,7 +315,7 @@ async def cblocal(_, query: CallbackQuery):
 /ubjoinc - invite the assistant for join to your channel
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbcmds")]]
         ),
     )
 
@@ -328,7 +332,7 @@ async def cbadven(_, query: CallbackQuery):
 /id - show the group/user id & other
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbcmds")]]
         ),
     )
 
@@ -352,7 +356,7 @@ async def cblamp(_, query: CallbackQuery):
 /music (on / off) - disable / enable music player in your group
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbcmds")]]
         ),
     )
 
@@ -369,7 +373,7 @@ async def cblab(_, query: CallbackQuery):
 /sh (query) - run code
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbcmds")]]
         ),
     )
 
@@ -387,7 +391,7 @@ async def cbmoon(_, query: CallbackQuery):
 📝 note: all commands owned by this bot can be executed by the owner of the bot without any exceptions.
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cbcmds")]]
         ),
     )
 
@@ -398,9 +402,9 @@ async def cmdhome(_, query: CallbackQuery):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝🥀𝐂𝐌𝐃 𝐒𝐘𝐍𝐓𝐀𝐗༎⃝➤", callback_data="cmdsyntax")
+                InlineKeyboardButton("💫𝗖𝗠𝗗 𝗦𝗬𝗡𝗧𝗔𝗫", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")
+                InlineKeyboardButton("❣️𝗖𝗟𝗢𝗦𝗘", callback_data="close")
             ]
         ]
     )
@@ -413,13 +417,13 @@ async def cmdhome(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cmdsyntax"))
 async def cmdsyntax(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**༎⃝🥀𝐂𝐌𝐃 𝐒𝐘𝐍𝐓𝐀𝐗༎⃝➤** to play music on **Voice Chat:**
+        f"""**𝗖𝗠𝗗 𝗦𝗬𝗡𝗧𝗔𝗫** to play music on **Voice Chat:**
 
 • `/play (query)` - for playing music directly via youtube
-• `/ghost (query)` - play song using audio file
+• `/stream (query)` - play song using audio file
 
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cmdhome")]]
+            [[InlineKeyboardButton("❣️𝗕𝗔𝗖𝗞", callback_data="cmdhome")]]
         ),
     )
