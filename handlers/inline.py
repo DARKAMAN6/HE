@@ -16,7 +16,7 @@ async def inline(client: Client, query: InlineQuery):
         await client.answer_inline_query(
             query.id,
             results=answers,
-            switch_pm_text="𝚆𝚁𝙸𝚃𝙴 𝚃𝙷𝙴 𝚃𝙸𝚃𝙻𝙴 𝙾𝙵 𝚃𝙷𝙴 𝚈𝙾𝚄 𝚃𝚄𝙱𝙴 𝚅𝙸𝙳𝙴𝙾 🎧 𝚅𝙴𝙽𝙾𝙼 𝙾𝙽 𝙵𝙸𝚁𝙴",
+            switch_pm_text="sᴇᴀʀᴄʜ ʏᴏᴜ ᴛᴜʙᴇ ᴠɪᴅᴇᴏ",
             switch_pm_parameter="help",
             cache_time=0,
         )
