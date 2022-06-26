@@ -96,8 +96,8 @@ async def generate_cover(title, thumbnail, ctitle):
               await f.close()
     image1 = Image.open("./background.png")
     image2 = Image.open("etc/foreground.png")
-    image3 = changeImageSize(1280, 720, image1)
-    image4 = changeImageSize(1280, 720, image2)
+    image3 = changeImageSize(1580, 2024, image1)
+    image4 = changeImageSize(1580, 2024, image2)
     image5 = image3.convert("RGBA")
     image6 = image4.convert("RGBA")
     Image.alpha_composite(image5, image6).save("temp.png")
@@ -120,9 +120,9 @@ async def playlist(client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("这 Sᴜᴘᴘᴏʀᴛ [🇮🇳]", url=f"https://t.me/BOT_X_SUPPORT"),
                 InlineKeyboardButton(
-                    "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "这 Uᴘᴅᴀᴛᴇs [🇮🇳]", url=f"https://t.me/BOT_X_UPDATES"
                 ),
             ]
         ]
