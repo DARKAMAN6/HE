@@ -1,8 +1,9 @@
 pyrogram==1.4.16
 tgcrypto
 youtube-search
+youtube-search-python==1.4.9
 yt-dlp
-py-tgcalls
+py-tgcalls==0.8.1
 python-dotenv
 requests
 aiohttp
@@ -18,3 +19,5 @@ pymongo
 dnspython
 heroku3
 gitpython
+pyyaml==5.3.1
+speedtest-cli
