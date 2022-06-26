@@ -177,15 +177,15 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
-                InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
-                InlineKeyboardButton("⏭", "skip"),
+                InlineKeyboardButton("▢", "leave"),
+                InlineKeyboardButton("II", "puse"),
+                InlineKeyboardButton("▷", "resume"),
+                InlineKeyboardButton("‣‣I", "skip"),
             ],
             [
-                InlineKeyboardButton("༎⃝✨𝐏𝐋𝐀𝐘𝐋𝐈𝐒𝐓༎⃝➤", "playlist"),
+                InlineKeyboardButton("这 Pʟᴀʏʟɪsᴛ [🇮🇳]", "playlist"),
             ],
-            [InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", "cls")],
+            [InlineKeyboardButton("这 Cʟᴏsᴇ [🇮🇳]", "cls")],
         ]
     )
     return mar
@@ -262,12 +262,12 @@ async def p_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("这 Sᴜᴘᴘᴏʀᴛ [🇮🇳]", url=f"https://t.me/BOT_X_SUPPORT"),
                 InlineKeyboardButton(
-                    "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "这 Cʜᴀɴɴᴇʟ [🇮🇳]", url=f"https://t.me/BOT_X_CHANNEL"
                 ),
             ],
-            [InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="menu")],
+            [InlineKeyboardButton("这 Mᴇɴᴜ [🇮🇳]", callback_data="menu")],
         ]
     )
 
@@ -310,12 +310,12 @@ async def m_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("这 Sᴜᴘᴘᴏʀᴛ [🇮🇳]", url=f"https://t.me/BOT_X_SUPPORT"),
                 InlineKeyboardButton(
-                    "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "这 Cʜᴀɴɴᴇʟ [🇮🇳]", url=f"https://t.me/BOT_X_CHANNEL"
                 ),
             ],
-            [InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="menu")],
+            [InlineKeyboardButton("这 Mᴇɴᴜ [🇮🇳]", callback_data="menu")],
         ]
     )
 
@@ -418,15 +418,15 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "leave"),
-                    InlineKeyboardButton("⏸", "puse"),
-                    InlineKeyboardButton("▶️", "resume"),
-                    InlineKeyboardButton("⏭", "skip"),
+                    InlineKeyboardButton("▢", "leave"),
+                    InlineKeyboardButton("II", "puse"),
+                    InlineKeyboardButton("▷", "resume"),
+                    InlineKeyboardButton("‣‣I", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("༎⃝✨𝐏𝐋𝐀𝐘𝐋𝐈𝐒𝐓༎⃝➤", "playlist"),
+                    InlineKeyboardButton("这 Pʟᴀʏʟɪsᴛ [🇮🇳]", "playlist"),
                 ],
-                [InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", "cls")],
+                [InlineKeyboardButton("这 Cʟᴏsᴇ [🇮🇳]", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -451,7 +451,7 @@ async def m_cb(b, cb):
                 await cb.message.edit(
                     nmq,
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")]]
+                        [[InlineKeyboardButton("这 Cʟᴏsᴇ [🇮🇳]", callback_data="close")]]
                     ),
                 )
             else:
@@ -478,7 +478,7 @@ async def m_cb(b, cb):
             await cb.message.edit(
                 hps,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")]]
+                    [[InlineKeyboardButton("这 Cʟᴏsᴇ [🇮🇳]", callback_data="close")]]
                 ),
             )
         else:
@@ -491,9 +491,9 @@ async def ytplay(_, message: Message):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝🥀𝐂𝐌𝐃 𝐒𝐘𝐍𝐓𝐀𝐗༎⃝➤", callback_data="cmdsyntax")
+                InlineKeyboardButton("这 Cᴍᴅ Sʏɴᴛᴀx [🇮🇳]", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")
+                InlineKeyboardButton("这 Cʟᴏsᴇ [🇮🇳]", callback_data="close")
             ]
         ]
     )
@@ -503,7 +503,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("**༎⃝🔥𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂 𝐎𝐍 𝐅𝐈𝐑𝐄༎⃝🔥**")
+    lel = await message.reply("**ᴇᴋ ᴍɪɴᴜᴛᴇ ʀᴜᴋ ᴠᴀɪɪ🔥**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -558,7 +558,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("**༎⃝💔𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐍𝐆 𝐓𝐎 𝐆𝐇𝐎𝐒𝐓 𝐒𝐄𝐑𝐕𝐄𝐑𝐒༎⃝➤**")
+    await lel.edit("**ᴇ ʀᴀᴊᴜ sᴏɴɢ ᴘʟᴀʏ ᴋʀ ɴᴀ ʙᴀʙᴀ 👀**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
