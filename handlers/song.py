@@ -1,7 +1,3 @@
-# 𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 𝙾𝙿
-# 𝙾𝚆𝙽𝙴𝚁 ➪ 𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽6 𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽5 
-# 𝚃𝙴𝙰𝙼 ➪ 𝙰𝙼𝙰𝙽-𝙶𝚄𝙹𝙹𝙰𝚁
-
 from __future__ import unicode_literals
 
 import asyncio
@@ -56,7 +52,7 @@ def song(_, message):
         m.edit("❌ song not found.\n\nplease give a valid song name.")
         print(str(e))
         return
-    m.edit("𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁🔥")
+    m.edit("𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁🔥")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
