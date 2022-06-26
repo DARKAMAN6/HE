@@ -7,7 +7,7 @@ import ffmpeg
 import asyncio
 import subprocess
 from asyncio import sleep
-from plugins.nopm import User
+from handlers.nopm import User
 from yt-dlp import YoutubeDL
 from pyrogram import Client, filters
 from pyrogram.types import Message
