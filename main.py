@@ -19,8 +19,15 @@ bot = Bot(
     plugins=dict(root="handlers"),
 )
 
-print(f"[INFO]: Tʀᴏᴊᴀɴs Mᴜsɪᴄ v{__version__} Sᴛᴀʀᴛᴇᴅ !")
 
 bot.start()
+user.start
+print(f"[INFO]: Tʀᴏᴊᴀɴs Mᴜsɪᴄ v{__version__} Sᴛᴀʀᴛᴇᴅ !")
+
 run()
+
 idle()
+bot.stop
+User.stop
+print("\n[INFO] - STOPPED VIDEO PLAYER BOT, JOIN @BOT_X_SUPPORT")
+
