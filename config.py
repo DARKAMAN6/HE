@@ -9,6 +9,9 @@ if os.path.exists("local.env"):
 load_dotenv()
 que = {}
 admins = {}
+OLD_PMS = {}
+AUDIO_CALL = {}
+VIDEO_CALL = {}
 SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_NAME = getenv("BOT_NAME", "Veez Music")
@@ -46,3 +49,8 @@ UPSTREAM_REPO = os.environ.get(
     "UPSTREAM_REPO", "https://github.com/levina-lab/VeezMusic"
 )
 HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
+REPLY_MESSAGE = getenv("REPLY_MESSAGE", "")
+if not REPLY_MESSAGE:
+    REPLY_MESSAGE = None
+else:
+    REPLY_MESSAGE = REPLY_MESSAGE
