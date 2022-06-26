@@ -558,7 +558,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("**ᴇ ʀᴀᴊᴜ sᴏɴɢ ᴘʟᴀʏ ᴋʀ ɴᴀ ʙᴀʙᴀ 👀**")
+    await lel.edit("**ᴀᴇ ʀᴀᴊᴜ sᴏɴɢ ᴘʟᴀʏ ᴋʀ ɴᴀ ʙᴀʙᴀ 🔥**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -597,10 +597,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝✨𝐌𝐄𝐍𝐔༎⃝➤", callback_data="menu"),
-                InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="cls"),
+                InlineKeyboardButton("这 Mᴇɴᴜ [🇮🇳]", callback_data="menu"),
+                InlineKeyboardButton("这 Cʟᴏsᴇ [🇮🇳]", callback_data="cls"),
             ],
-            [InlineKeyboardButton("༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("这 Cʜᴀɴɴᴇʟ [🇮🇳]", url=f"https://t.me/BOT_X_SUPPORT")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
@@ -621,7 +621,7 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"💡 **𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴 ✘** [{title[:35]}...]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {message.from_user.mention}",
+            caption=f"💡 **Tʀᴀᴄᴋ Aᴅᴅᴇᴅ Tᴏ ǫᴜᴇᴜᴇ»** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴 ✘** [{title[:35]}...]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
