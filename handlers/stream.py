@@ -1,4 +1,3 @@
-# Copyright (C) 2021 GHOST Music-Project
 
 from os import path
 import converter
@@ -7,9 +6,7 @@ from config import (
     ALIVE_IMG,
     BOT_USERNAME,
     DURATION_LIMIT,
-    GROUP_SUPPORT,
     QUE_IMG,
-    UPDATES_CHANNEL,
 )
 from handlers.play import convert_seconds
 from helpers.filters import command, other_filters
@@ -20,19 +17,19 @@ from pytgcalls.types.input_stream import InputStream
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
-@Client.on_message(command(["ghost", f"ghost@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
 async def ghost(_, message: Message):
     costumer = message.from_user.mention
-    lel = await message.reply_text("**༎⃝💔𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐍𝐆 𝐓𝐎 𝐆𝐇𝐎𝐒𝐓 𝐒𝐄𝐑𝐕𝐄𝐑𝐒༎⃝➤**")
+    lel = await message.reply_text("**sᴇᴀʀᴄʜɪɴɢ ❣️**")
 
     keyboard = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"
+                    text="这 Sᴜᴘᴘᴏʀᴛ [🇮🇳]", url=f"https://t.me/BOT_X_SUPPORT"
                 ),
                 InlineKeyboardButton(
-                    text="༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    text="这 Cʜᴀɴɴᴇʟ [🇮🇳]", url=f"https://t.me/BOT_X_CHANNEL"
                 ),
             ]
         ]
@@ -62,7 +59,7 @@ async def ghost(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo=f"{ALIVE_IMG}",
-            caption=f"💡 **𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴 ✘** {title[:50]}\n⏱ **Duration ✘** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {costumer}",
+            caption=f"💡 **Tʀᴀᴄᴋ Aᴅᴅᴇᴅ Tᴏ Qᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ ✘** {title[:50]}\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ ✘** {costumer}",
             reply_markup=keyboard,
         )
     else:
@@ -76,8 +73,8 @@ async def ghost(_, message: Message):
         )
         await message.reply_photo(
             photo=f"{ALIVE_IMG}",
-            caption=f"🏷 **𝙽𝙰𝙼𝙴 ✘** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂 ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {costumer}",
+            caption=f"🏷 **Nᴀᴍᴇ ✘** {title[:50]}\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n💡 **Sᴛᴀᴛᴜs ✘** `Pʟᴀʏɪɴɢ`\n"
+            + f"🎧 **Rᴇǫᴜᴇsᴛ Bʏ ✘** {costumer}",
             reply_markup=keyboard,
         )
 
