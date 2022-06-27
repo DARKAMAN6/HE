@@ -83,7 +83,7 @@ async def end_callbacc(client, CallbackQuery):
 
 @Client.on_message(filters.command(["vstream", f"stream@{USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
-async def stream(client, m: Message):
+async def vstream(client, m: Message):
     msg = await m.reply_text("🔄 `Processing ...`")
     chat_id = m.chat.id
     media = m.reply_to_message
@@ -234,39 +234,6 @@ async def stream(client, m: Message):
         )
     )
 
-
-@Client.on_message(filters.command(["pause", f"pause@{USERNAME}"]) & filters.group & ~filters.edited)
-@authorized_users_only
-async def pause(_, m: Message):
-    chat_id = m.chat.id
-
-    if chat_id in AUDIO_CALL:
-        await AUDIO_CALL[chat_id].set_audio_pause(True)
-        await m.reply_text("⏸ **Paused Audio Streaming !**")
-
-    elif chat_id in VIDEO_CALL:
-        await VIDEO_CALL[chat_id].set_video_pause(True)
-        await m.reply_text("⏸ **Paused Video Streaming !**")
-
-    else:
-        await m.reply_text("❌ **Noting Is Streaming !**")
-
-
-@Client.on_message(filters.command(["resume", f"resume@{USERNAME}"]) & filters.group & ~filters.edited)
-@authorized_users_only
-async def resume(_, m: Message):
-    chat_id = m.chat.id
-
-    if chat_id in AUDIO_CALL:
-        await AUDIO_CALL[chat_id].set_audio_pause(False)
-        await m.reply_text("▶️ **Resumed Audio Streaming !**")
-
-    elif chat_id in VIDEO_CALL:
-        await VIDEO_CALL[chat_id].set_video_pause(False)
-        await m.reply_text("▶️ **Resumed Video Streaming !**")
-
-    else:
-        await m.reply_text("❌ **Noting Is Streaming !**")
 
 
 @Client.on_message(filters.command(["endstream", f"endstream@{USERNAME}"]) & filters.group & ~filters.edited)
