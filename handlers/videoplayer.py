@@ -108,7 +108,7 @@ async def end_callbacc(client, CallbackQuery):
     await CallbackQuery.message.delete()
 
 
-@Client.on_message(filters.command(["vstream", f"stream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["vstream", f"vstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def vstream(client, m: Message):
     msg = await m.reply_text("🔄 `Processing ...`")
