@@ -1,10 +1,10 @@
 import requests
-from pytgcalls import.Client,idle
+from pytgcalls import idle
 from callsmusic import run
 from handlers import __version__
 from handler.nopm.import User
 from config import API_HASH, API_ID, BG_IMAGE, BOT_TOKEN
-
+from pyrogram import Client
 
 response = requests.get(BG_IMAGE)
 with open("./etc/foreground.png", "wb") as file:
