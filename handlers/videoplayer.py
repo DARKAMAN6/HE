@@ -7,7 +7,7 @@ import ffmpeg
 import asyncio
 import subprocess
 from asyncio import sleep
-from yt-dlp import YoutubeDL
+from yt_dlp import YoutubeDL
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pytgcalls import GroupCallFactory
