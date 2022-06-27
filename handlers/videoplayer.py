@@ -18,7 +18,7 @@ from pytgcalls.types.input_stream.quality import (
     LowQualityVideo,
     MediumQualityVideo,
 )
-from config import AUDIO_CALL, VIDEO_CALL, ALIVE_PIC
+from config import AUDIO_CALL, VIDEO_CALL, ALIVE_IMG
 from youtubesearchpython import VideosSearch
 from helpers.decorators import authorized_users_only
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -146,7 +146,7 @@ async def vstream(client, m: Message):
         else:
             await msg.edit("🔄 `Starting Live Video Stream ...`")
             link = query
-            thumb = "{ALIVE_PIC}"
+            thumb = "{ALIVE_IMG}"
 
         vid_call = VIDEO_CALL.get(chat_id)
         if vid_call:
@@ -198,7 +198,7 @@ async def vstream(client, m: Message):
             lel = await client.download_media(lol['file_id'])
             thumb = lel
         else:
-            thumb = "ALIVE_PIC"
+            thumb = "ALIVE_IMG"
 
         video = await client.download_media(media)
 
