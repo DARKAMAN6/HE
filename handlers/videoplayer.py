@@ -283,16 +283,3 @@ async def endstream(client, m: Message):
         await msg.edit("🤖 **Please Start An Stream First !**")
 
 
-# pytgcalls handlers
-
-@group_call.on_audio_playout_ended
-async def audio_ended_handler(_, __):
-    await sleep(3)
-    await group_call.stop()
-    print(f"[INFO] - AUDIO_CALL ENDED !")
-
-@group_call.on_video_playout_ended
-async def video_ended_handler(_, __):
-    await sleep(3)
-    await group_call.stop()
-    print(f"[INFO] - VIDEO_CALL ENDED !")
