@@ -3,7 +3,6 @@ services:
   worker:
     build: .
     environment:
-     
       SESSION_NAME: $SESSION_NAME
       BOT_TOKEN: $BOT_TOKEN
       BOT_NAME: $BOT_NAME
