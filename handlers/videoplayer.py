@@ -127,7 +127,7 @@ async def vstream(client, m: Message):
         if match:
             await msg.edit("🔄 `Starting YouTube Video Stream ...`")
             try:
-                meta = ydl.extract_info(query, download=False)
+                meta = ytdl.extract_info(query, download=False)
                 formats = meta.get('formats', [meta])
                 for f in formats:
                     ytstreamlink = f['url']
