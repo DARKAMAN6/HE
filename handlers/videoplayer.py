@@ -7,13 +7,12 @@ import ffmpeg
 import asyncio
 import subprocess
 from asyncio import sleep
-from handlers.nopm import User
 from yt-dlp import YoutubeDL
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pytgcalls import GroupCallFactory
 from helpers.bot_utils import USERNAME
-from config import AUDIO_CALL, VIDEO_CALL
+from config import AUDIO_CALL, VIDEO_CALL, ALIVE_PIC
 from youtubesearchpython import VideosSearch
 from helpers.decorators import authorized_users_only
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -119,7 +118,7 @@ async def stream(client, m: Message):
         else:
             await msg.edit("🔄 `Starting Live Video Stream ...`")
             link = query
-            thumb = "https://telegra.ph/file/3e14128ad5c9ec47801bd.jpg"
+            thumb = "{ALIVE_PIC}"
 
         vid_call = VIDEO_CALL.get(chat_id)
         if vid_call:
