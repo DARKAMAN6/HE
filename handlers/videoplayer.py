@@ -1,4 +1,3 @@
-
 import os
 import re
 import sys
@@ -18,7 +17,7 @@ from pytgcalls.types.input_stream.quality import (
     LowQualityVideo,
     MediumQualityVideo,
 )
-from config import AUDIO_CALL, VIDEO_CALL, ALIVE_IMG
+from config import AUDIO_CALL, VIDEO_CALL, ALIVE_IMG, BOT_USERNAME
 from youtubesearchpython import VideosSearch
 from helpers.decorators import authorized_users_only
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -109,7 +108,7 @@ async def end_callbacc(client, CallbackQuery):
     await CallbackQuery.message.delete()
 
 
-@Client.on_message(filters.command(["vstream", f"stream@{USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["vstream", f"stream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def vstream(client, m: Message):
     msg = await m.reply_text("🔄 `Processing ...`")
