@@ -18,7 +18,6 @@ from pytgcalls.types.input_stream.quality import (
     LowQualityVideo,
     MediumQualityVideo,
 )
-from helpers.bot_utils import USERNAME
 from config import AUDIO_CALL, VIDEO_CALL, ALIVE_PIC
 from youtubesearchpython import VideosSearch
 from helpers.decorators import authorized_users_only
