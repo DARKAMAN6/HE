@@ -6,7 +6,7 @@ from helpers.bot_utils import USERNAME
 from pyrogram.errors import BotInlineDisabled
 from config import API_ID, API_HASH, REPLY_MESSAGE, OLD_PMS
 
-User = Bot(
+User = Client(
     SESSION_STRING,
     API_ID,
     API_HASH
