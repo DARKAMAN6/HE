@@ -108,3 +108,7 @@ python3 main.py # run the bot.
                           
 <a href="https://t.me/darkamansupport"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃%20-golden.svg?logo=Telegram"></a> <a href="https://t.me/darkamanchannel"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻%20-blue.svg?logo=Telegram"></a>
 
+## 🚀 Okteto Deployment
+
+<h4>Click the button below to deploy on Okteto!</h4>
+<p align="center"><a href="https://cloud.okteto.com/deploy?repository=https://github.com/DARKAMAN6/HE"><img src="https://img.shields.io/badge/Deploy%20To%20Okteto-informational?style=for-the-badge&logo=Okteto" width="200""/></a>
