@@ -263,7 +263,7 @@ async def vstream(client, m: Message):
 
 
 
-@Client.on_message(filters.command(["endstream", f"endstream@{USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["endstream", f"endstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def endstream(client, m: Message):
     msg = await m.reply_text("🔄 `Processing ...`")
