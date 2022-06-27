@@ -10,7 +10,14 @@ from asyncio import sleep
 from yt_dlp import YoutubeDL
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from pytgcalls import GroupCallFactory
+from pytgcalls import StreamType
+from pytgcalls.types.input_stream import AudioVideoPiped
+from pytgcalls.types.input_stream.quality import (
+    HighQualityAudio,
+    HighQualityVideo,
+    LowQualityVideo,
+    MediumQualityVideo,
+)
 from helpers.bot_utils import USERNAME
 from config import AUDIO_CALL, VIDEO_CALL, ALIVE_PIC
 from youtubesearchpython import VideosSearch
@@ -18,13 +25,35 @@ from helpers.decorators import authorized_users_only
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 
-ydl_opts = {
-        "quiet": True,
-        "geo_bypass": True,
-        "nocheckcertificate": True,
-}
-ydl = YoutubeDL(ydl_opts)
-group_call = GroupCallFactory(User, GroupCallFactory.MTPROTO_CLIENT_TYPE.PYROGRAM).get_group_call()
+def ytsearch(query: str):
+    try:
+        search = VideosSearch(query, limit=1).result()
+        data = search["result"][0]
+        songname = data["title"]
+        url = data["link"]
+        duration = data["duration"]
+        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
+        return [songname, url, duration, thumbnail]
+    except Exception as e:
+        print(e)
+        return 0
+
+
+async def ytdl(link):
+    proc = await asyncio.create_subprocess_exec(
+        "yt-dlp",
+        "-g",
+        "-f",
+        "best[height<=?720][width<=?1280]",
+        f"{link}",
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    stdout, stderr = await proc.communicate()
+    if stdout:
+        return 1, stdout.decode().split("\n")[0]
+    else:
+        return 0, stderr.decode()
 
 
 @Client.on_callback_query(filters.regex("pause_callback"))
