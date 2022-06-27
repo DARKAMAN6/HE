@@ -1,7 +1,7 @@
 from pyrogram import Client
 from config import API_ID, API_HASH, BOT_TOKEN
 
-bot = Bot(
+bot = Client(
     "VideoPlayer",
     API_ID,
     API_HASH,
