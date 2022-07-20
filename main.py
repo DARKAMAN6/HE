@@ -11,7 +11,7 @@ with open("./etc/foreground.png", "wb") as file:
     file.write(response.content)
 
 
-bot = Client(
+bot = Bot(
     ":memory:",
     API_ID,
     API_HASH,
