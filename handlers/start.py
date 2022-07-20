@@ -53,7 +53,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
         await message.reply_photo(
         photo=f"{ALIVE_IMG}",
-        caption=f"""💫 **𝗜 𝗖𝗔𝗡 𝗣𝗟𝗔𝗬 𝗠𝗨𝗦𝗜𝗖 𝗜𝗡 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘 𝗖𝗛𝗔𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 > [𝗧𝗥𝗢𝗝𝗔𝗡𝗦](https://t.me/THE_TROJANS_NETWORK) ❤️**""",
+        caption=f"""💫 **𝗜 𝗖𝗔𝗡 𝗣𝗟𝗔𝗬 𝗠𝗨𝗦𝗜𝗖 𝗜𝗡 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘 𝗖𝗛𝗔𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 > [𝗔𝗠𝗔𝗡](https://t.me/AM4N_XD) ❤️**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -71,12 +71,12 @@ async def start_(client: Client, message: Message):
                         "👅𝗖𝗛𝗜𝗧 𝗖𝗛𝗔𝗧", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🗯️𝗡𝗘𝗧 𝗪𝗢𝗥𝗞", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🗯️𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "❤️𝗧𝗥𝗢𝗝𝗔𝗡𝗦 𝗙𝗘𝗗❤️", url="https://t.me/TROJANS_FED"
+                        "❤️𝗢𝗪𝗡𝗘𝗥❤️", url="https://t.me/AM4N_XD"
                     )
                 ],
             ]
