@@ -10,7 +10,7 @@ from pytgcalls.types import Update
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import BOT_USERNAME
+from config import BOT_USERNAME, SESSION_NAME
 from helpers.decorators import authorized_users_only
 from helpers.filters import command
 from helpers.loggings import LOG
